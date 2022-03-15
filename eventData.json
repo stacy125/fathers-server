@@ -1,0 +1,29 @@
+[
+    {
+        "type": "Soccer",
+        "location": "Roosevelt Park, Edison, NJ",
+        "description": "sports event for father and children",
+        "price": "free",
+        "date": "March 30, 2021",
+        "time": "12:00 PM",
+        "website": "https://havenoclue.com"
+    },
+    {
+        "type": "Crafts",
+        "location": "Thompson School, Hudson, NY",
+        "description": "crafting event for father and children",
+        "price": "free",
+        "date": "January 30, 2022",
+        "time": "3:00 PM",
+        "website": "https://thisisatest.com"
+    },
+    {
+        "type": "Chess",
+        "location": "Lincoln Park, Nowhere, MI",
+        "description": "chess event for father and children",
+        "price": "free",
+        "date": "October 30, 2021",
+        "time": "1:00 PM",
+        "website": "https://somewhere.com"
+    }
+]
