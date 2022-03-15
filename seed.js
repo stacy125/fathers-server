@@ -8,7 +8,7 @@ let eventJson = require('./eventData.json');
         .then(() => {
             userModel.create(userJson)
                 .then(users => {
-                    mongoose.disconnect()
+                    // mongoose.disconnect()
                 })
         }),
 
@@ -16,6 +16,6 @@ let eventJson = require('./eventData.json');
         .then(() => {
             eventModel.create(eventJson)
                 .then(events => {
-                    mongoose.disconnect()
+                    // mongoose.disconnect()
                 })
         })
