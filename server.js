@@ -2,7 +2,6 @@
 
 require("./models/User");
 require('./models/Events');
-require('./database');
 let router = require('./router')
 let cors = require('cors')
 const express = require("express");
@@ -19,7 +18,7 @@ app.use(bodyParser.json());
 app.use(authRoutes);
 app.use(router);
 
-let PORT = process.env.PORT || 8080
+let PORT = process.env.PORT || 4000
 
 //connection to mongoDB with token
 const mongoURI = 'mongodb+srv://stacy125:fatherhoodIsLit@cluster0.w8kgz.mongodb.net/fatherhoodIsLit?retryWrites=true&w=majority';
@@ -39,17 +38,19 @@ let connectionString = "";
 if (process.env.NODE_ENV === "production") {
     connectionString = process.env.DB_URL;
 } else {
-    connectionString = "mongodb://localhost/FatherhoodIsLit";
+    connectionString = "mongodb://localhost/fatherhoodIsLit";
 }
 // mongoose.connect(connectionString, mongooseConnectionConfig)
 
 
 
 //get data making sure that token, email and password is correct and send the email
-app.get("/", requireAuth, (req, res) => {
-    res.send(`Your email: ${req.user.email}`);
-});
-
+// app.get("/", requireAuth, (req, res) => {
+//     res.send(`Your email: ${req.user.email}`);
+// });
+app.get('/test', (request, response) => {
+    response.json("Hello")
+})
 
 app.listen(PORT, () => {
     console.log("listening on port");

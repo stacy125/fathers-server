@@ -1,6 +1,6 @@
 
 let eventModel = require('./models/Events')
-require('./database')
+
 
 
 let controller = {
