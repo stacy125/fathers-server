@@ -1,5 +1,5 @@
 let express = require('express');
-const controller = require('./controller');
+// const controller = require('./controller');
 let router = new express.Router();
 let eventJson = require('./eventData.json');
 
@@ -13,9 +13,9 @@ router.get('/', (request, response) => {
     })
 })
 
-router.get('/events', controller.read)
-router.post('/events', controller.create)
-router.put('/events/:id', controller.update)
-router.delete('/events/:id', controller.delete)
+// router.get('/events', controller.read)
+// router.post('/events', controller.create)
+// router.put('/events/:id', controller.update)
+// router.delete('/events/:id', controller.delete)
 
 module.exports = router

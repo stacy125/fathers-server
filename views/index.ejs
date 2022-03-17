@@ -1,0 +1,66 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>Users and Events</title>
+    </head>
+
+    <body>
+        <h1>EJS Template for backend.</h1>
+
+        <form action="/User" method="POST">
+            <input type="text" placeholder="name" name="username" />
+            <input type="text" placeholder="email" name="email" />
+            <input type="text" placeholder="password" name="password" />
+            <button type="submit">Submit</button>
+        </form>
+        <form action="/events" method="POST">
+            <input type="text" placeholder="type" name="type" />
+            <input type="text" placeholder="location" name="location" />
+            <input type="text" placeholder="description" name="description" />
+            <input type="text" placeholder="price" name="price" />
+            <input type="text" placeholder="date" name="date" />
+            <input type="text" placeholder="time" name="time" />
+            <input type="text" placeholder="website" name="website" />
+            <button type="submit">Submit</button>
+        </form>
+        <h2> Users </h2>
+        
+        <ul class="users">
+            <!-- Loop through quotes -->
+            <% for(let i=0; i < users.length; i++) {%>
+                <li class="quote">
+                    <!-- Output name from the iterated quote object -->
+                    <span>
+                        <%= Users[i].name %>
+                    </span>:
+                    <!-- Output quote from the iterated quote object -->
+                    <span>
+                        <%= users[i].user %>
+                    </span>
+                </li>
+                <% } %>
+        </ul>
+        <h2> Events </h2>
+        
+        <ul class="events">
+            <!-- Loop through quotes -->
+            <% for(let i=0; i < events.length; i++) {%>
+                <li class="event">
+                    <!-- Output name from the iterated quote object -->
+                    <span>
+                        <%= events[i].name %>
+                    </span>:
+                    <!-- Output quote from the iterated quote object -->
+                    <span>
+                        <%= events[i].event %>
+                    </span>
+                </li>
+                <% } %>
+        </ul>
+        <script  src="/main.js"></script>
+    </body>
+
+</html>
